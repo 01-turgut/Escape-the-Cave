@@ -1,11 +1,13 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
-import colorama
-from colorama import Fore
-import typewriter
+import time
+from colorama import Fore, Back
 from typewriter import typewriter
+from banner import banner
 
 
-Messae = Fore.RED + "Hello World\n"
-typewriter(Messae)
+banner()
+
+start = input
+time.sleep(3)
+typewriter(Back.RED + Fore.WHITE + "...You were walking around and saw a cave...\n")
+
