@@ -11,4 +11,4 @@ def typewriter(message):
         if char != "\n":
             time.sleep(0.1)
         else:
-            time.sleep(1)
+            time.sleep(0.5)
