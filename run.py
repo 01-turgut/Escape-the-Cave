@@ -29,7 +29,7 @@ def beginning():
     typewriter(TXTCLR + "ROAD ON LEFT WAS LITTLE BRIGHTER\n" + RST)
     typewriter(TXTCLR + "HE HAS TO CHOOSE LEFT OR STRAIGHT\n" + RST)
 
-    choice1 = input(TXTCLR + "LEFT OR STRAIGHT (L/S)" + RST)
+    choice1 = input(TXTCLR + "LEFT OR STRAIGHT (L/S)\n" + RST)
     if choice1 == "s" or choice1 == "S":
         typewriter(TXTCLR + "ROAD WAS TO DARK...\n" + RST)
         typewriter(TXTCLR + "HENRY DIDN'T SEE THE WELL AND HE FELL...\n" + RST)
@@ -48,7 +48,15 @@ def beginning():
         print()
         time.sleep(SEC)
         return beginning()
-        typewriter(TXTCLR + "\n" + RST)
+
+
+def choice2():
+    print()
+    print()
+    typewriter(TXTCLR + "THIS ROAD IS BRIGHT, BIRDS ARE TWEETING.\n" + RST)
+    print()
+    typewriter(TXTCLR + "HENRY HAS HOPE!\n" + RST)
+    print()
 
 
 def start():
