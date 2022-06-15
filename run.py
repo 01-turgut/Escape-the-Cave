@@ -71,6 +71,7 @@ def beginning():
 
 
 def choice2():
+
     """
     This function tells the story that will enable the user,
     to take the second decision for the game,
@@ -111,8 +112,8 @@ def choice2():
         banner()
         time.sleep(SEC)
         start()
-    # elif quest2 == "l" or quest2 == "L":
-    #     choice3()
+    elif quest2 == "l" or quest2 == "L":
+        choice3()
     else:
         print(Fore.BLUE + "Invalid Entry\n" + RST)
         print()
@@ -123,9 +124,48 @@ def choice2():
         time.sleep(SEC)
         return choice2()
 
-def choice3():
-    
 
+def choice3():
+
+    """
+    This function tells the story that will enable the user,
+    to take the third decision for the game,
+    and includes how to act in possible decisions.
+    """
+    print()
+    print()
+    typewriter(TXTCLR + "ROAD GETS BRIGHTER...\n" + RST)
+    print()
+    typewriter(TXTCLR + "BIRD CHIRPS GOT LOUDER...\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE SAW A ROOM WITH STONE DOOR...\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE GOT CURIOUS...\n" + RST)
+    print()
+    quest3 = input(QCLR + "DO YOU WANT HENRY TO SEE THE ROOM?(Y/N)\n" + RST)
+    if quest3 == "y" or quest3 == "Y":
+        print()
+        typewriter(TXTCLR + "HENRY OPENS AND ENTERING THE ROOM..\n" + RST)
+        print()
+        typewriter(TXTCLR + "THE DOOR CLOSED...\n" + RST)
+        print()
+        typewriter(TXTCLR + "ROOM WAS FILLED WITH CYANURIC ACID...\n" + RST)
+        print()
+        typewriter(TXTCLR + "HENRY POISONED BY CYANURIC ACID...\n" + RST)
+        print()
+    # elif quest3 == "N" or quest3 == "n":
+    #     choice4()
+    else:
+        print(Fore.BLUE + "Invalid Entry\n" + RST)
+        print()
+        print(Fore.BLUE + "Wait for the game to load" + Fore.RESET)
+        print()
+        print(Fore.BLUE + "Game will continue where you left off" + Fore.RESET)
+        print()
+        time.sleep(SEC)
+        return choice3()
+
+def
 
 def start():
 
