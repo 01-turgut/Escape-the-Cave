@@ -14,6 +14,3 @@ def thank():
     print()
     print()
     print(Fore.GREEN + thanks + Fore.RESET)
-
-
-thank()
