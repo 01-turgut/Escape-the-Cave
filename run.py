@@ -192,7 +192,7 @@ def choice4():
     print()
     typewriter(TXTCLR + "END OF THIS ROAD THERE WAS TWO ROADS...\n" + RST)
     print()
-    quest4 = input(QCLR + "wOULD YOU LIKE HENRY TO TURN RIGHT OR LEFT?(\n)")
+    quest4 = input(QCLR + "WOULD YOU LIKE HENRY TO TURN RIGHT OR LEFT?(R/L)\n")
     if quest4 == "l" or quest4 == "L":
         print()
         typewriter(TXTCLR + "HENRY COULDN'T FIND THE EXIT...\n" + RST)
