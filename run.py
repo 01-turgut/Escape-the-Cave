@@ -1,17 +1,19 @@
 import time
-from colorama import Fore, Back
+from colorama import Fore
 from typewriter import typewriter
 from banner import banner
 
 SEC = 2
-TXTCLR = Fore.GREEN
-RST = Fore.RESET
+TXTCLR = Fore.GREEN  # Text color variable
+RST = Fore.RESET  # Reset the text color variable
+QCLR = Fore.RED  # Text color for inputs
 
 
 def beginning():
     """
-    The initial function of this game.
-    This will give the user the first interaction with the game.
+    This function tells the story that will enable the user,
+    to take the first decision for the game,
+    and includes how to act in possible decisions.
     """
     print()
     print()
@@ -41,28 +43,39 @@ def beginning():
     print()
     typewriter(TXTCLR + "HE HAS TO CHOOSE LEFT OR STRAIGHT\n" + RST)
 
-    choice1 = input("LEFT OR STRAIGHT (L/S)\n")
-    if choice1 == "s" or choice1 == "S":
+    quest1 = input(QCLR + "LEFT OR STRAIGHT (L/S)\n" + RST)
+
+    if quest1 == "s" or quest1 == "S":
         typewriter(TXTCLR + "ROAD WAS TO DARK...\n" + RST)
+        print()
         typewriter(TXTCLR + "HENRY DIDN'T SEE THE WELL AND HE FELL...\n" + RST)
+        print()
         typewriter(TXTCLR + "FILLED WITH ALLIGATORS... HE IS DEAD!\n" + RST)
         print()
+        print(Fore.BLUE + "TRY AGAIN! SAVE HENRY!" + Fore.RESET)
+        time.sleep(SEC)
         banner()
         time.sleep(SEC)
         start()
-    
-    elif choice1 == "l" or choice1 == "L":
+    elif quest1 == "l" or quest1 == "L":
         choice2()
     else:
-        print(Fore.RED + "Invalid Entry\n" + RST)
-        print(Fore.RED + "Wait for the load" + Fore.RESET)
-        print(Fore.RED + "Game will continue where you left off" + Fore.RESET)
+        print(Fore.BLUE + "Invalid Entry\n" + RST)
+        print()
+        print(Fore.BLUE + "Wait for the game to load" + Fore.RESET)
+        print()
+        print(Fore.BLUE + "Game will continue where you left off" + Fore.RESET)
         print()
         time.sleep(SEC)
         return beginning()
 
 
 def choice2():
+    """
+    This function tells the story that will enable the user,
+    to take the second decision for the game,
+    and includes how to act in possible decisions.
+    """
     print()
     print()
     typewriter(TXTCLR + "THIS ROAD IS BRIGHT, BIRDS ARE TWEETING.\n" + RST)
@@ -75,6 +88,43 @@ def choice2():
     print()
     typewriter(TXTCLR + "AFTER SOME TIME HE STARTED WALKING AGAIN...\n" + RST)
     print()
+    typewriter(TXTCLR + "AFTER SOME TIME HE HEARD SOME NOISE..\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE STARTED RUNNIG TOWARDS THE NOISE...\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE CAME TO THE END OF THE ROAD...\n" + RST)
+    print()
+    typewriter(TXTCLR + "THERE IS LEFT TURN AND RIGHT TURN...\n" + RST)
+    print()
+    typewriter(TXTCLR + "NOISE COMES FROM RIGHT SIDE...\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE IS SCARED, HE HAS TO CHOOSE...\n" + RST)
+    print()
+    quest2 = input(QCLR + "LEFT OR RIGHT (L/R)\n" + RST)
+    if quest2 == "r" or quest2 == "R":
+        typewriter(TXTCLR + "THE ROAD GETTING DARKER, WRONG EXIT...\n" + RST)
+        typewriter(TXTCLR + "HENRY'S FEET SLIPPED DOWNHILL.\n" + RST)
+        typewriter(TXTCLR + "FELL OFF THE CLIFF.\n" + RST)
+        print()
+        print(Fore.BLUE + "TRY AGAIN! SAVE HENRY!" + Fore.RESET)
+        time.sleep(SEC)
+        banner()
+        time.sleep(SEC)
+        start()
+    # elif quest2 == "l" or quest2 == "L":
+    #     choice3()
+    else:
+        print(Fore.BLUE + "Invalid Entry\n" + RST)
+        print()
+        print(Fore.BLUE + "Wait for the game to load" + Fore.RESET)
+        print()
+        print(Fore.BLUE + "Game will continue where you left off" + Fore.RESET)
+        print()
+        time.sleep(SEC)
+        return choice2()
+
+def choice3():
+    
 
 
 def start():
@@ -86,14 +136,14 @@ def start():
     """
     typewriter(TXTCLR + "THIS GAME IS ABOUT TEACHER HENRY!\n" + RST)
     typewriter(TXTCLR + "CAN YOU GET HIM OUT OF THE CAVE?\n" + RST)
-    question1 = input("WOULD YOU LIKE TO HELP HENRY? (Y/N):Y\n ")
+    question1 = input(QCLR + "WOULD YOU LIKE TO HELP HENRY? (Y/N):\n " + RST)
     if question1 == "N" or question1 == "n":
         print()
         typewriter(TXTCLR + "Go home coward! \n " + RST)
         print()
         time.sleep(SEC)
         banner()
-        ply = input("Press 'P' to start the game\n")
+        ply = input(QCLR + "Press 'P' to restart the game\n" + RST)
         if ply == "p" or ply == "P":
             return start()
     elif question1 == "Y" or question1 == "y":
