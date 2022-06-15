@@ -2,6 +2,7 @@ import time
 from colorama import Fore
 from typewriter import typewriter
 from banner import banner
+from thanks import thank
 
 SEC = 2
 TXTCLR = Fore.GREEN  # Text color variable
@@ -153,8 +154,13 @@ def choice3():
         print()
         typewriter(TXTCLR + "HENRY POISONED BY CYANURIC ACID...\n" + RST)
         print()
-    # elif quest3 == "N" or quest3 == "n":
-    #     choice4()
+        print(Fore.BLUE + "TRY AGAIN! SAVE HENRY!" + Fore.RESET)
+        time.sleep(SEC)
+        banner()
+        time.sleep(SEC)
+        start()
+    elif quest3 == "N" or quest3 == "n":
+        choice4()
     else:
         print(Fore.BLUE + "Invalid Entry\n" + RST)
         print()
@@ -165,7 +171,59 @@ def choice3():
         time.sleep(SEC)
         return choice3()
 
-def
+
+def choice4():
+    """
+    This function tells the story that will enable the user,
+    to take the last decision for the game,
+    and includes how to act in possible decisions.
+    """
+    print()
+    print()
+    typewriter(TXTCLR + "HENRY HAS PASSED THE ROOM...\n" + RST)
+    print()
+    typewriter(TXTCLR + "THE ROAD IS GETTING BRIGHTER...\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE REMEMBERED HE HAS WATER...\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE REACHED HIS BACKPACK...\n" + RST)
+    print()
+    typewriter(TXTCLR + "DRANK SOME WATER...\n" + RST)
+    print()
+    typewriter(TXTCLR + "END OF THIS ROAD THERE WAS TWO ROADS...\n" + RST)
+    print()
+    quest4 = input(QCLR + "wOULD YOU LIKE HENRY TO TURN RIGHT OR LEFT?(\n)")
+    if quest4 == "l" or quest4 == "L":
+        print()
+        typewriter(TXTCLR + "HENRY COULDN'T FIND THE EXIT...\n" + RST)
+        print()
+        typewriter(TXTCLR + "HENRY STARVED TO DEATH...\n" + RST)
+        print()
+        print(Fore.BLUE + "TRY AGAIN! SAVE HENRY!" + Fore.RESET)
+        time.sleep(SEC)
+        banner()
+        time.sleep(SEC)
+        start()
+    elif quest4 == "r" or quest4 == "R":
+        print()
+        thank()
+        print()
+        time.sleep(3)
+        banner()
+        ply = input(QCLR + "Press 'P' to Play Again\n" + RST)
+        if ply == "p" or ply == "P":
+            return start()
+
+    else:
+        print(Fore.BLUE + "Invalid Entry\n" + RST)
+        print()
+        print(Fore.BLUE + "Wait for the game to load" + Fore.RESET)
+        print()
+        print(Fore.BLUE + "Game will continue where you left off" + Fore.RESET)
+        print()
+        time.sleep(SEC)
+        return choice4()
+
 
 def start():
 
@@ -176,8 +234,8 @@ def start():
     """
     typewriter(TXTCLR + "THIS GAME IS ABOUT TEACHER HENRY!\n" + RST)
     typewriter(TXTCLR + "CAN YOU GET HIM OUT OF THE CAVE?\n" + RST)
-    question1 = input(QCLR + "WOULD YOU LIKE TO HELP HENRY? (Y/N):\n " + RST)
-    if question1 == "N" or question1 == "n":
+    question = input(QCLR + "WOULD YOU LIKE TO HELP HENRY? (Y/N):\n " + RST)
+    if question == "N" or question == "n":
         print()
         typewriter(TXTCLR + "Go home coward! \n " + RST)
         print()
@@ -186,7 +244,7 @@ def start():
         ply = input(QCLR + "Press 'P' to restart the game\n" + RST)
         if ply == "p" or ply == "P":
             return start()
-    elif question1 == "Y" or question1 == "y":
+    elif question == "Y" or question == "y":
         beginning()
     else:
         print(Fore.RED + "Invalid Entry, Wait for game to load again!\n")
