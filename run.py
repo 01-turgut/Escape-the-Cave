@@ -4,8 +4,8 @@ from typewriter import typewriter
 from banner import banner
 
 SEC = 2
-TXTCLR = Back.RED + Fore.WHITE
-RST = Back.RESET
+TXTCLR = Fore.GREEN
+RST = Fore.RESET
 
 
 def beginning():
@@ -16,29 +16,29 @@ def beginning():
     print()
     print()
     typewriter(TXTCLR + "YOU ARE AMAZING!\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "THIS CAVE IS NEAR HENRY'S HOUSE...\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HENRY WANTS TO DISCOVER THE CAVE\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "AS FAR AS HE KNOWS THE CAVE HAS TWO ENTRANCE\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HENRY CANNOT FIND THE EXIT...\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HE IS LOST AND TIRED, PHONE NOT WORKING\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HE ALREADY CHECKED DOOR HE ENTERED...\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "IT'S BLOCKED, HE DOESN'T KNOW HOW...\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HE SAW A NEW ROAD, THAT HE DIDN'T CHECK...\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HE STARTED WALKING TO FIND THE EXIT\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HE WALKED A LITTLE, SAW A NEW ROAD ON LEFT\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "ROAD ON LEFT WAS LITTLE BRIGHTER\n" + RST)
-    print(RST)
+    print()
     typewriter(TXTCLR + "HE HAS TO CHOOSE LEFT OR STRAIGHT\n" + RST)
 
     choice1 = input("LEFT OR STRAIGHT (L/S)\n")
@@ -46,7 +46,7 @@ def beginning():
         typewriter(TXTCLR + "ROAD WAS TO DARK...\n" + RST)
         typewriter(TXTCLR + "HENRY DIDN'T SEE THE WELL AND HE FELL...\n" + RST)
         typewriter(TXTCLR + "FILLED WITH ALLIGATORS... HE IS DEAD!\n" + RST)
-        print(RST)
+        print()
         banner()
         time.sleep(SEC)
         start()
@@ -69,6 +69,12 @@ def choice2():
     print()
     typewriter(TXTCLR + "HENRY HAS HOPE!\n" + RST)
     print()
+    typewriter(TXTCLR + "HE IS TIRED, IT'S BEEN HOURS...\n" + RST)
+    print()
+    typewriter(TXTCLR + "HE WANTED TO SIT AND GET SOME REST...\n" + RST)
+    print()
+    typewriter(TXTCLR + "AFTER SOME TIME HE STARTED WALKING AGAIN...\n" + RST)
+    print()
 
 
 def start():
@@ -80,11 +86,11 @@ def start():
     """
     typewriter(TXTCLR + "THIS GAME IS ABOUT TEACHER HENRY!\n" + RST)
     typewriter(TXTCLR + "CAN YOU GET HIM OUT OF THE CAVE?\n" + RST)
-    question1 = input("WOULD YOU LIKE TO HELP HENRY? (Y/N)\n: ")
+    question1 = input("WOULD YOU LIKE TO HELP HENRY? (Y/N):Y\n ")
     if question1 == "N" or question1 == "n":
         print()
         typewriter(TXTCLR + "Go home coward! \n " + RST)
-        print(RST)
+        print()
         time.sleep(SEC)
         banner()
         ply = input("Press 'P' to start the game\n")

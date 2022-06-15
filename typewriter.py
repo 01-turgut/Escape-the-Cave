@@ -9,6 +9,9 @@ def typewriter(message):
         sys.stdout.flush()
 
         if char != "\n":
-            time.sleep(0.1)
+            time.sleep(0.05)
         else:
             time.sleep(0.5)
+
+
+# typewriter("Typewriter will help me to print my story letter by letter")
