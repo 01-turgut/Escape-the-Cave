@@ -206,6 +206,10 @@ def choice4():
         start()
     elif quest4 == "r" or quest4 == "R":
         print()
+        typewriter(TXTCLR + "HENRY MADE IT...\n" + RST)
+        print()
+        typewriter(TXTCLR + "WITH YOUR HELP...\n" + RST)
+        print()
         thank()
         print()
         time.sleep(3)

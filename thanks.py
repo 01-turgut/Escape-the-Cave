@@ -9,7 +9,7 @@ def thank():
     to user playing the game(Saving Henry)"""
 
     custom_fig = Figlet(font="bubble")
-    thanks = custom_fig.renderText("THANK YOU FOR SAVING HENRY!")
+    thanks = custom_fig.renderText("THANK YOUUUU!")
     time.sleep(0.5)
     print()
     print()
