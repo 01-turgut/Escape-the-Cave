@@ -46,7 +46,7 @@ def beginning():
 
     quest1 = input(QCLR + "LEFT OR STRAIGHT (L/S)\n" + RST)
 
-    if quest1 == "s" or quest1 == "S":
+    if quest1.lower() == "s":
         typewriter(TXTCLR + "ROAD WAS TO DARK...\n" + RST)
         print()
         typewriter(TXTCLR + "HENRY DIDN'T SEE THE WELL AND HE FELL...\n" + RST)
@@ -58,8 +58,8 @@ def beginning():
         banner()
         time.sleep(SEC)
         start()
-    elif quest1 == "l" or quest1 == "L":
-        choice2()
+    elif quest1.lower() == "l":
+        cliff()
     else:
         print(Fore.BLUE + "Invalid Entry\n" + RST)
         print()
@@ -71,7 +71,7 @@ def beginning():
         return beginning()
 
 
-def choice2():
+def cliff():
 
     """
     This function tells the story that will enable the user,
@@ -103,7 +103,7 @@ def choice2():
     typewriter(TXTCLR + "HE IS SCARED, HE HAS TO CHOOSE...\n" + RST)
     print()
     quest2 = input(QCLR + "LEFT OR RIGHT (L/R)\n" + RST)
-    if quest2 == "r" or quest2 == "R":
+    if quest2.lower() == "r":
         typewriter(TXTCLR + "THE ROAD GETTING DARKER, WRONG EXIT...\n" + RST)
         typewriter(TXTCLR + "HENRY'S FEET SLIPPED DOWNHILL.\n" + RST)
         typewriter(TXTCLR + "FELL OFF THE CLIFF.\n" + RST)
@@ -113,8 +113,8 @@ def choice2():
         banner()
         time.sleep(SEC)
         start()
-    elif quest2 == "l" or quest2 == "L":
-        choice3()
+    elif quest2.lower() == "l":
+        poison_room()
     else:
         print(Fore.BLUE + "Invalid Entry\n" + RST)
         print()
@@ -123,10 +123,10 @@ def choice2():
         print(Fore.BLUE + "Game will continue where you left off" + Fore.RESET)
         print()
         time.sleep(SEC)
-        return choice2()
+        return cliff()
 
 
-def choice3():
+def poison_room():
 
     """
     This function tells the story that will enable the user,
@@ -144,7 +144,7 @@ def choice3():
     typewriter(TXTCLR + "HE GOT CURIOUS...\n" + RST)
     print()
     quest3 = input(QCLR + "DO YOU WANT HENRY TO SEE THE ROOM?(Y/N)\n" + RST)
-    if quest3 == "y" or quest3 == "Y":
+    if quest3.lower() == "y":
         print()
         typewriter(TXTCLR + "HENRY OPENS AND ENTERING THE ROOM..\n" + RST)
         print()
@@ -159,8 +159,8 @@ def choice3():
         banner()
         time.sleep(SEC)
         start()
-    elif quest3 == "N" or quest3 == "n":
-        choice4()
+    elif quest3.lower() == "n":
+        no_exit()
     else:
         print(Fore.BLUE + "Invalid Entry\n" + RST)
         print()
@@ -169,10 +169,10 @@ def choice3():
         print(Fore.BLUE + "Game will continue where you left off" + Fore.RESET)
         print()
         time.sleep(SEC)
-        return choice3()
+        return poison_room()
 
 
-def choice4():
+def no_exit():
     """
     This function tells the story that will enable the user,
     to take the last decision for the game,
@@ -193,7 +193,7 @@ def choice4():
     typewriter(TXTCLR + "END OF THIS ROAD THERE WAS TWO ROADS...\n" + RST)
     print()
     quest4 = input(QCLR + "WOULD YOU LIKE HENRY TO TURN RIGHT OR LEFT?(R/L)\n")
-    if quest4 == "l" or quest4 == "L":
+    if quest4.lower() == "l":
         print()
         typewriter(TXTCLR + "HENRY COULDN'T FIND THE EXIT...\n" + RST)
         print()
@@ -204,7 +204,7 @@ def choice4():
         banner()
         time.sleep(SEC)
         start()
-    elif quest4 == "r" or quest4 == "R":
+    elif quest4.lower() == "r":
         print()
         typewriter(TXTCLR + "HENRY MADE IT...\n" + RST)
         print()
@@ -215,9 +215,13 @@ def choice4():
         time.sleep(3)
         banner()
         ply = input(QCLR + "Press 'P' to Play Again\n" + RST)
-        if ply == "p" or ply == "P":
+        if ply.lower() == "p":
             return start()
-
+        else:
+            print()
+            print()
+            print(QCLR + "Invalid Entry" + RST)
+            return start()
     else:
         print(Fore.BLUE + "Invalid Entry\n" + RST)
         print()
@@ -226,7 +230,7 @@ def choice4():
         print(Fore.BLUE + "Game will continue where you left off" + Fore.RESET)
         print()
         time.sleep(SEC)
-        return choice4()
+        return no_exit()
 
 
 def start():
@@ -237,18 +241,25 @@ def start():
     It warns and restarts the game when used out of duty.
     """
     typewriter(TXTCLR + "THIS GAME IS ABOUT TEACHER HENRY!\n" + RST)
+    print()
     typewriter(TXTCLR + "CAN YOU GET HIM OUT OF THE CAVE?\n" + RST)
+    print()
     question = input(QCLR + "WOULD YOU LIKE TO HELP HENRY? (Y/N):\n " + RST)
-    if question == "N" or question == "n":
+    if question.lower() == "n":
         print()
         typewriter(TXTCLR + "Go home coward! \n " + RST)
         print()
         time.sleep(SEC)
         banner()
         ply = input(QCLR + "Press 'P' to restart the game\n" + RST)
-        if ply == "p" or ply == "P":
+        if ply.lower() == "p":
             return start()
-    elif question == "Y" or question == "y":
+        else:
+            print()
+            print()
+            print(QCLR + "Invalid Entry" + RST)
+            return start()
+    elif question.lower() == "y":
         beginning()
     else:
         print(Fore.RED + "Invalid Entry, Wait for game to load again!\n")
