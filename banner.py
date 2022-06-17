@@ -22,4 +22,3 @@ def banner():
     print()
     print()
     print(Fore.GREEN + welcome + Fore.RESET)
-    

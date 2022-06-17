@@ -6,7 +6,8 @@ from colorama import Fore
 def thank():
 
     """This is function to print thank,
-    to user playing the game(Saving Henry)"""
+    to user playing the game(Saving Henry)
+    """
 
     custom_fig = Figlet(font="bubble")
     thanks = custom_fig.renderText("THANK YOUUUU!")
