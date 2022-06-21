@@ -192,4 +192,4 @@ My [Deployment](#deployment) section is copied from [Daisy Gunn](https://www.lin
 
 # Acknowledgements
 
-I would like to thank my course mentor [Harry Dhillon](https://www.linkedin.com/in/harry-dhillon-299b321b3/)
+I would like to thank my course mentor [Harry Dhillon](https://www.linkedin.com/in/harry-dhillon-299b321b3/) for his support and guidance.
