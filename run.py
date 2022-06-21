@@ -192,7 +192,7 @@ def no_exit():
     print()
     typewriter(TXTCLR + "END OF THIS ROAD THERE WAS TWO ROADS...\n" + RST)
     print()
-    quest4 = input(QCLR + "WOULD YOU LIKE HENRY TO TURN RIGHT OR LEFT?(R/L)\n" + RST)
+    quest4 = input(QCLR + "DO YOU WANT HENRY TO TURN RIGHT/LEFT?(R/L)\n" + RST)
     if quest4.lower() == "l":
         print()
         typewriter(TXTCLR + "HENRY COULDN'T FIND THE EXIT...\n" + RST)
