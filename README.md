@@ -118,7 +118,7 @@ Many thanks to [Shane Muir](https://www.linkedin.com/in/shanemuirhead/) and [Sim
 
 # Deployment
 
-The master branch of this repository has been used for the deployed version of this application.
+The main branch of this repository has been used for the deployed version of this application.
 
 ### Using Github & Gitpod
 
